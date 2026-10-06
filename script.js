@@ -125,6 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inicializar UI del carrito al cargar cualquier página
   updateUI();
 
+  if (cartIcon) {
+    cartIcon.textContent = totalItemsCount > 0 ? `🛒 (${totalItemsCount})` : '🛒';
+  }
   itemRow.innerHTML = `
   <div class="cart-item-info">
     <img src="${item.img}" alt="${item.name}">

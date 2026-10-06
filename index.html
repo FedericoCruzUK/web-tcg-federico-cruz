@@ -16,22 +16,21 @@
   <!-- Encabezado / Navegación principal -->
   <header class="navbar">
     <div class="navbar-top">
-      <!-- Logo a la izquierda -->
+      <!-- 1. Izquierda: Botón Hamburguesa dentro de un cuadrado -->
+      <button id="menu-toggle-btn" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+  
+      <!-- 2. Centro: Logo (solo la imagen en mobile) -->
       <div class="logo">
-        <img src="assets/logo.webp" alt="TCG Vault Logo" class="logo-img">
-        <span>TCG Vault</span>
+        <img src="../assets/logo.webp" alt="TCG Vault Logo" class="logo-img">
+        <span class="logo-text">TCG Vault</span>
       </div>
-
-      <!-- Carrito + Botón Menú (Aparece solo en celular) -->
-      <div class="nav-actions">
-        <div class="cart-icon">🛒 Cart (0)</div>
-          <button id="menu-toggle-btn" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
-        </div>
-      </div>
-    
-      <!-- Buscador -->
-      <input type="text" placeholder="Buscar cartas o sellados de Pokémon..." class="search-bar">
+  
+      <!-- 3. Derecha: Solo el ícono del carrito -->
+      <div class="cart-icon" aria-label="Carrito">🛒</div>
     </div>
+  
+    <!-- Buscador abajo -->
+    <input type="text" placeholder="Buscar cartas o sellados de Pokémon..." class="search-bar">
   </header>
 
   <!-- Navegación de categorías -->
@@ -41,9 +40,9 @@
       <button id="close-menu-btn" class="close-menu-btn">&times;</button>
     </div>
     <a href="../index.html">Inicio</a>
-    <a href="../pages/pokemon.html" class="active">Pokémon</a>
-    <a href="../pages/yugioh.html">Yu-Gi-Oh!</a>
-    <a href="../pages/accesorios.html">Accesorios</a>
+    <a href="./pages/pokemon.html" class="active">Pokémon</a>
+    <a href="./pages/yugioh.html">Yu-Gi-Oh!</a>
+    <a href="./pages/accesorios.html">Accesorios</a>
   </nav>
   
   <!-- Fondo oscuro para cerrar en celular -->

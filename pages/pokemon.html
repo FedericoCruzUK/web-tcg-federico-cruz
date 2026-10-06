@@ -14,12 +14,22 @@
 
   <!-- Encabezado / Navegación principal -->
   <header class="navbar">
-    <div class="logo">
-      <img src="../assets/logo.webp" alt="TCG Vault Logo" class="logo-img">
-      <span>TCG Vault</span>
+    <div class="navbar-top">
+      <!-- 1. Izquierda: Botón Hamburguesa dentro de un cuadrado -->
+      <button id="menu-toggle-btn" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+  
+      <!-- 2. Centro: Logo (solo la imagen en mobile) -->
+      <div class="logo">
+        <img src="../assets/logo.webp" alt="TCG Vault Logo" class="logo-img">
+        <span class="logo-text">TCG Vault</span>
+      </div>
+  
+      <!-- 3. Derecha: Solo el ícono del carrito -->
+      <div class="cart-icon" aria-label="Carrito">🛒</div>
     </div>
+  
+    <!-- Buscador abajo -->
     <input type="text" placeholder="Buscar cartas o sellados de Pokémon..." class="search-bar">
-    <div class="cart-icon">🛒 Cart (0)</div>
   </header>
 
   <!-- Navbar de Franquicias / Juegos -->
