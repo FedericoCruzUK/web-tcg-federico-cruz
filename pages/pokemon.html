@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCG Vault - Pokémon TCG</title>
+  <!-- Logo en la pestaña del navegador (Favicon) -->
+  <link rel="icon" href="../assets/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="../styles.css">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Encabezado / Navegación principal -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../assets/logo.webp" alt="TCG Vault Logo" class="logo-img">
+      <span>TCG Vault</span>
+    </div>
+    <input type="text" placeholder="Buscar cartas o sellados de Pokémon..." class="search-bar">
+    <div class="cart-icon">🛒 Cart (0)</div>
+  </header>
+
+  <!-- Navbar de Franquicias / Juegos -->
+  <nav class="categories">
+    <a href="../index.html">Inicio</a>
+    <a href="pokemon.html" class="active">Pokémon</a>
+    <a href="yugioh.html">Yu-Gi-Oh!</a>
+    <a href="accesorios.html">Accesorios</a>
+  </nav>
+
+  <!-- Sub-Navegación con atributos data-filter -->
+  <div class="sub-nav">
+    <button class="sub-tab active" data-filter="all">Todos los productos</button>
+    <button class="sub-tab" data-filter="singular">Cartas Singulares</button>
+    <button class="sub-tab" data-filter="sellado">Productos Sellados</button>
+  </div>
+    
+  <!-- Barra de Filtros y Ordenamiento -->
+  <div class="filters-bar">  
+    <!-- Filtro por Expansión -->
+    <div class="filter-group">
+      <label for="filter-expansion">Expansión:</label>
+      <select id="filter-expansion" class="filter-select">
+        <option value="all">Todas las expansiones</option>
+        <option value="base-set">Base Set</option>
+        <option value="30th-anniversary">30th Anniversary</option>
+        <option value="scarlet-violet">Scarlet & Violet</option>
+      </select>
+    </div>
+  
+    <!-- Ordenamiento por Precio y Alfabeto -->
+    <div class="filter-group">
+      <label for="sort-by">Ordenar por:</label>
+      <select id="sort-by" class="filter-select">
+        <option value="default">Destacados</option>
+        <option value="price-asc">Precio: Menor a Mayor</option>
+        <option value="price-desc">Precio: Mayor a Menor</option>
+        <option value="name-asc">Nombre: A - Z</option>
+        <option value="name-desc">Nombre: Z - A</option>
+      </select>
+    </div>  
+  </div>
+  
+  <!-- Catálogo de Pokémon -->
+  <main class="catalog">
+
+    <!-- Productos: Cartas Singulares (data-type="singular") -->
+    <article class="card-item" 
+      data-type="singular"
+      data-expansion="base-set"
+      data-price="250000"
+      data-name="Charizard - Base Set">
+      <div class="card-badge">Near Mint</div>
+      <img src="../assets/carta-ejemplo.jpg" alt="Charizard Base Set">
+      <h3 class="card-name">Charizard - Base Set</h3>
+      <p class="set-name">Pokémon • Holo Rare</p>
+      <span class="price">$250.000 ARS</span>
+      <button class="btn-add" 
+        data-id="1"
+        data-name="Charizard - Base Set"
+        data-price="250000"          
+        data-img="../assets/carta-ejemplo.jpg">
+        Agregar al Carrito
+      </button>
+    </article>
+      
+    <article class="card-item" data-type="singular">
+      <div class="card-badge">Near Mint</div>
+      <img src="../assets/megalucario-mep033.jpg" alt="Mega Lucario Promo">
+      <h3 class="card-name">Mega Lucario MEP033</h3>
+      <p class="set-name">Pokémon • Promo</p>
+      <span class="price">$20.000 ARS</span>
+      <button class="btn-add" 
+        data-id="2" 
+        data-name="Mega Lucario - Promo" 
+        data-price="20000" 
+        data-img="../assets/megalucario-mep033.jpg">
+        Agregar al Carrito
+      </button>
+    </article>
+      
+    <article class="card-item" data-type="singular">
+      <div class="card-badge">Near Mint</div>
+      <img src="../assets/n-zekrom-mep031.jpg" alt="N's Zekrom MEP 031 - MEP Black Star Promo">
+      <h3 class="card-name">N's Zekrom MEP031</h3>
+      <p class="set-name">Pokémon • Promo</p>
+      <span class="price">$15.000 ARS</span>
+      <button class="btn-add" 
+        data-id="3" 
+        data-name="N's Zekrom - Promo" 
+        data-price="15000" 
+        data-img="../assets/n-zekrom-mep031.jpg">
+        Agregar al Carrito
+      </button>
+    </article>
+    
+    <!-- Productos: Sellados (data-type="sellado") -->
+    <article class="card-item" 
+      data-type="sellado"
+      data-expansion="30th-anniversary"
+      data-price="45000"
+      data-name="Booster Bundle 30th Anniversary">
+      <div class="card-badge" style="background-color: #8b5cf6;">Sellado</div>
+      <img src="../assets/pokemon-30th-booster-bundle.jpg" alt="Booster Bundle 30th">
+      <h3>Booster Bundle 30th Anniversary</h3>
+      <p class="set-name">Pokémon • Producto Sellado</p>
+      <span class="price">$45.000 ARS</span>
+      <button class="btn-add" 
+        data-id="4" 
+        data-name="Booster Bundle 30th Anniversary" 
+        data-price="45000" 
+        data-img="../assets/pokemon-30th-booster-bundle.jpg">
+        Agregar al Carrito
+      </button>
+    </article>
+
+  </main>
+
+  <!-- Drawer / Panel Lateral del Carrito -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h2>Tu Carrito de Compras</h2>
+      <button id="close-cart-btn">&times;</button>
+    </div>
+    
+    <div id="cart-items" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="total-container">
+        <span>Total:</span>
+        <span id="cart-total">$0 ARS</span>
+      </div>
+      <button class="btn-checkout">Finalizar Compra</button>
+    </div>
+  </aside>
+  <div id="cart-overlay" class="cart-overlay"></div>
+
+  <!-- Salimos de la carpeta pages para buscar el JS -->
+  <script src="../script.js"></script>
+</body>
+</html>

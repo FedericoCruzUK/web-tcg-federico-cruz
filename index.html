@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCG Vault - Inicio</title>
+  
+  <!-- Logo en la pestaña del navegador (Favicon) -->
+  <link rel="icon" href="assets/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Encabezado / Navegación principal -->
+  <header class="navbar">
+    <div class="navbar-top">
+      <!-- Logo a la izquierda -->
+      <div class="logo">
+        <img src="assets/logo.webp" alt="TCG Vault Logo" class="logo-img">
+        <span>TCG Vault</span>
+      </div>
+
+      <!-- Carrito + Botón Menú (Aparece solo en celular) -->
+      <div class="nav-actions">
+        <div class="cart-icon">🛒 Cart (0)</div>
+          <button id="menu-toggle-btn" class="menu-toggle-btn" aria-label="Abrir menú">☰</button>
+        </div>
+      </div>
+    
+      <!-- Buscador -->
+      <input type="text" placeholder="Buscar cartas o sellados de Pokémon..." class="search-bar">
+    </div>
+  </header>
+
+  <!-- Navegación de categorías -->
+  <nav id="nav-menu" class="categories">
+    <div class="mobile-menu-header">
+      <h3>Menú</h3>
+      <button id="close-menu-btn" class="close-menu-btn">&times;</button>
+    </div>
+    <a href="../index.html">Inicio</a>
+    <a href="/pages/pokemon.html" class="active">Pokémon</a>
+    <a href="/pages/yugioh.html">Yu-Gi-Oh!</a>
+    <a href="/pages/accesorios.html">Accesorios</a>
+  </nav>
+  
+  <!-- Fondo oscuro para cerrar en celular -->
+  <div id="menu-overlay" class="menu-overlay"></div>
+  </nav>
+
+  <!-- Contenido Principal: Banner de bienvenida limpio -->
+  <main class="hero-section">
+    <h2>Bienvenido a TCG Vault</h2>
+    <p>Tu tienda especializada en cartas singulares y productos sellados.</p>
+  </main>
+
+  <!-- Panel Lateral del Carrito -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h2>Tu Carrito de Compras</h2>
+      <button id="close-cart-btn">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-container">
+        <span>Total:</span>
+        <span id="cart-total">$0 ARS</span>
+      </div>
+      <button class="btn-checkout">Finalizar Compra</button>
+    </div>
+  </aside>
+  <div id="cart-overlay" class="cart-overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
